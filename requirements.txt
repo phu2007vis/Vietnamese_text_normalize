@@ -1,0 +1,7 @@
+transformers
+yacs
+editdistance
+edit-distance
+pandas
+sentencepiece
+git+https://github.com/CodeLinkIO/Vietnamese-text-normalization.git@main

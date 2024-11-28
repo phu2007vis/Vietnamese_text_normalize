@@ -1,0 +1,50 @@
+DEVICE: "cuda"
+SEED: 0
+SAVE: TRUE
+SAVE_PATH: results1
+
+# Model
+modeltype: "bart"
+pretrained_name: "vinai/bartpho-syllable-base"
+
+# Pretraining
+DO_PRETRAINING: False
+
+
+#Pretrain-Train Hyper
+
+## Batch size
+PRETRAIN_BATCH_SIZE: 12
+TRAIN_BATCH_SIZE: 18
+EVAL_BATCH_SIZE: 16
+PREDICT_BATCH_SIZE: 16
+## Optim
+LR: 0.0001
+BETAS: 
+  - 0.9
+  - 0.98
+warmup_step: 1000
+
+## Steps
+NUM_PRETRAIN_STEP: 10000
+show_loss_after_pretrain_steps: 200
+save_after_pretrain_steps: 2000
+
+NUM_TRAIN_STEP: 8000
+show_loss_after_steps: 100
+eval_after_steps: 400
+
+max_eval_length: 128
+## Data path
+pretrain_data_path: "data/train.csv"
+train_path: "data/train.csv"
+val_path: "data/test.csv"
+predict_path: "data/dev.csv"
+
+src_max_token_len: 256
+trg_max_token_len: 256
+pretrained_model: ""
+## Predict
+get_predict_score: TRUE
+max_predict_length: 256
+

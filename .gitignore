@@ -1,0 +1,10 @@
+data
+vocab
+results*
+out.csv
+*pycache__*
+VilexiNorm.e*
+future_works.txt
+out_augmented.csv
+*.pyc
+terminal.txt
